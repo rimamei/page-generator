@@ -60,13 +60,12 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold">Welcome back, John!</h1>
           <p className="text-gray-500">Here's your home status for today</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 overflow-x-scroll md:overflow-x-visible">
           <div className="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2">
             <Sun className="w-4 h-4 text-yellow-500" />
             <span>Sunny</span>
@@ -83,7 +82,7 @@ export default function Dashboard() {
       </div>
 
       {/* Rooms Grid */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <RoomButton 
           icon={<Home className="w-6 h-6" />}
           name="Living Room"
@@ -130,7 +129,7 @@ export default function Dashboard() {
       </div>
 
       {/* Controls Grid */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Music Player */}
         <div className="bg-gray-900 rounded-3xl p-6 text-white">
           <div className="flex justify-between items-center mb-4">
@@ -234,7 +233,7 @@ export default function Dashboard() {
       </div>
 
       {/* Device Stats */}
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <DeviceCard
           title="Energy Usage"
           icon={Lightbulb}
